@@ -1,17 +1,23 @@
 class Employee:
-  Employeecount = 0
-  def __init__(self, name, salary):
-    self.name = name
-    self.salary =salary
-    Employee.Employeecount +=1
+    employeecount = 0
 
-  def displaycount(self):
-    print ("We have %d number of employess" % Employee.Employeecount)
-  def displayemployee(self):
-    print ("Name: ",self.name, ",Salary: ",self.salary)
+    def __init__(self, name, salary, age):
+        self.name = name
+        self.salary = salary
+        self.age = age
+        Employee.employeecount += 1
 
-emp1 = Employee("Zara", 2000)
-emp2 = Employee("Romelu Lukaku", 4000)
-emp1.displayemployee()
-emp2.displayemployee()
-print ("We have %d number of employess" % Employee.Employeecount)
+    def displaycount(self):
+        print("We have {} number of employees".format(Employee.employeecount))
+
+    def displayemployee(self):
+        print("Name: ", self.name, "Salary: ", self.salary)
+
+    def work(self):
+        return "do some work"
+
+
+emp1 = Employee("Zara", 2000, 23)
+emp2 = Employee("Romelu Lukaku", 4000, 34)
+print(emp1.employeecount)
+print("We have {} number of employees".format(Employee.employeecount))
